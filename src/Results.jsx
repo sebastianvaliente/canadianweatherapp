@@ -16,10 +16,9 @@ class Results extends Component {
         <img src={`http://openweathermap.org/img/w/${this.props.weatherData.weather[0].icon}.png`}/>
 
         <div>
-          <p>Minimum Temperature: {this.props.weatherData.main.temp_min}</p>
-          <p>Temperature: {this.props.weatherData.main.temp}</p>
-          <p>Maximum Temperature: {this.props.weatherData.main.temp_max}</p>
-          <p>Humidity: {this.props.weatherData.main.humidity}</p>
+          <p>Minimum Temperature: {this.props.weatherData.main.temp_min}°</p>
+          <p>Temperature: {this.props.weatherData.main.temp}°</p>
+          <p>Maximum Temperature: {this.props.weatherData.main.temp_max}°</p>
         </div>
 
       </div>

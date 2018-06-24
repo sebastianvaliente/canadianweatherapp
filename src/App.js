@@ -14,9 +14,9 @@ class App extends Component {
     this.setState({isLoading: true, weatherData: null}) // clears state every time so loading state can render
 
     try {
-      var weatherData = await (await fetch(`http://api.openweathermap.org/1data/2.5/weather?q=${city},Canada&units=metric&APPID=7d6f7bb8698882389fd14b203d5bb8aa`)).json()
+      var weatherData = await (await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},Canada&units=metric&APPID=7d6f7bb8698882389fd14b203d5bb8aa`)).json()
     } catch (error) {
-      console.log(error)
+      // landing page renders if weatherData is false so for edge case it needs to be set to something a bit more identifiable
       var weatherData = 0
     }
 
@@ -68,6 +68,7 @@ class App extends Component {
           <CityButtons getWeatherData={this.getWeatherData}/>
 
           <div className="results">
+
             <h4>The Weather API is unresponsive. Please try again later.</h4>
           </div>
 
