@@ -25,14 +25,21 @@ body {
 
 .results {
   position: relative;
-  top: 3em;
+  top: 5em;
+  font-size: 1.3em;
+}
+
+.results > img {
+  display: inline-block;
+  color: white;
+  width: 3em;
 }
 
 .allCityButtons {
   position: relative;
   top: 2em;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 19%;
+  margin-right: 19%;
 }
 
 
@@ -43,12 +50,18 @@ body {
   padding: 1.5em;
   color: white;
   transition: .3s;
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
 
 .button:hover {
   background-color: white;
   color: #a4d5e6;
   transition: .3s;
+}
 
+.results {
+  border: solid;
+  padding: 1em;
+  margin-left: 19.8%;
+  margin-right: 19.8%;
 }
