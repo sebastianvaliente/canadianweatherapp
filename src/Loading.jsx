@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { PropagateLoader } from 'react-spinners';
+import { ClipLoader } from 'react-spinners';
 
 class Loading extends Component {
 
@@ -10,11 +10,11 @@ class Loading extends Component {
   render() {
 
     return(
-      <div>
-        <PropagateLoader
+      <div className="loading">
+
+        <ClipLoader
           color={'white'}
-          loading={true }
-          size={10}
+          size={100}
         />
 
       </div>

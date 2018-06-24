@@ -27,10 +27,14 @@ class App extends Component {
 
       // Results Page
       return(
-        <div>
+        <div className="masterContainer">
           <h1>Discover the weather in each of Canada's major cities.</h1>
+
           <CityButtons getWeatherData={this.getWeatherData}/>
-          Temperature: {this.state.weatherData.main.temp}
+
+          <div className="results">
+            Temperature: {this.state.weatherData.main.temp}
+          </div>
         </div>
       )
 
@@ -47,7 +51,7 @@ class App extends Component {
 
       // Landing Page
       return(
-        <div>
+        <div className="masterContainer">
           <h1>Discover the weather in each of Canada's major cities.</h1>
           <CityButtons getWeatherData={this.getWeatherData}/>
         </div>
