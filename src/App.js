@@ -60,6 +60,7 @@ class App extends Component {
     } else if(thereIsWeatherData == 0) {
       return(
 
+        // Edge case if API doesn't respond as expected.
         <div className="masterContainer">
 
           <h1>Discover the weather in each of Canada's major cities.</h1>
