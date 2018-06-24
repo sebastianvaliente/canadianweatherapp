@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import CityButtons from './Buttons.jsx'
 import Loading from './Loading.jsx'
 import Results from './Results.jsx'
-import testData from './testData.js'
 
 class App extends Component {
 
@@ -18,7 +17,7 @@ class App extends Component {
       var weatherData = await (await fetch(`http://api.openweathermap.org/1data/2.5/weather?q=${city},Canada&units=metric&APPID=7d6f7bb8698882389fd14b203d5bb8aa`)).json()
     } catch (error) {
       console.log(error)
-      var weatherData = null
+      var weatherData = 0
     }
 
     setTimeout( () => {
@@ -58,7 +57,7 @@ class App extends Component {
         </div>
 
       )
-    } else if(!thereIsWeatherData) {
+    } else if(thereIsWeatherData == 0) {
       return(
 
         <div className="masterContainer">
